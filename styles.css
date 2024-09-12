@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 0px;
+    height: 100vh; /* 使侧边栏高度为视口高度 */
+    position: fixed; /* 固定侧边栏 */
+    left: -200px; /* 初始状态下隐藏侧边栏 */
+    transition: left 0.3s; /* 添加过渡效果 */
+}
+
+.sidebar.active {
+    left: 0; /* 显示侧边栏 */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+.main-content {
+    margin-left: 40px; /* 确保主内容不被侧边栏覆盖 */
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.3s; /* 添加过渡效果 */
+}
+
+.main-content.active {
+    margin-left: 220px; /* 侧边栏显示时调整主内容的左边距 */
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #b7b7b7;
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 40px; /* 设置按钮宽度 */
+    height: 40px; /* 设置按钮高度 */
+    cursor: pointer;
+    z-index: 2; /* 确保按钮在侧边栏之上 */
+    border-radius: 50%; /* 设置圆角为50% */
+    transition: left 0.3s; /* 添加过渡效果 */
+    font-size: 24px; /* 增加字体大小 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar.active + .toggle-btn {
+    left: 210px; /* 调整按钮位置以适应侧边栏 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
