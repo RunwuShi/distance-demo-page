@@ -119,6 +119,10 @@
         <ul>
             <li><a href="#top">Home</a></li>
             <li><a href="#D1">D1: Fix room & mic</a></li>
+            <li><a href="#D2">D2: Fix room & random mics</a></li>
+            <li><a href="#D3">D3: Random rooms & random mics</a></li>
+            <li><a href="#D4">D4: real RIR from BUT ReverbDB dataset</a></li>
+
             <!-- 继续添加更多菜单项 -->
         </ul>
     </div>
@@ -145,7 +149,9 @@
         </div>
 
         <h1 id="D1">D1: Fix room & mic</h1>
-        <h1 id="D1">Sample 1</h1>
+        <h1 id="D1">D1 Sample 1</h1>
+        <h1>Room size: 7*8*3m, RT60: 0.2s</h1>
+        <h1>Speaker distance: 0.77m, 3.17m</h1>
         <div class="content">
             <!-- 第一行 1x2 图片布局 -->
             <div class="image-grid">
@@ -262,7 +268,9 @@
                 </div>
             </div>
         </div>
-        <h1 id="D1">Sample 2</h1>
+        <h1 id="D1">D1 Sample 2</h1>
+        <h1>Room size: 7*8*3m, RT60: 0.2s</h1>
+        <h1>Speaker distance: 2.81m, 3.35m</h1>
         <div class="content">
             <!-- 第一行 1x2 图片布局 -->
             <div class="image-grid">
@@ -379,11 +387,619 @@
                 </div>
             </div>
         </div>
-
-
         <div class="line-above">
-            <h1>Audio and Spectrum Demo</h1>
+
+        <h1 id="D2">D2: Fix room & random mics</h1>
+        <h1>D2 Sample 1</h1>
+        <h1>Room size: 7*8*3m, RT60: 0.3s</h1>
+        <h1>Speaker distance: 3.16m, 3.77m</h1>
+        <div class="content">
+            <!-- 第一行 1x2 图片布局 -->
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="02source\01.png" alt="Image 1">
+                </div>
+                <div class="image-container">
+                    <img src="02source\02.png" alt="Image 2">
+                </div>
+            </div>
+            <!-- 第二行 分左右布局 -->
+            <div class="row">
+                <div class="left">
+                    <div class="card">
+                        <p>Mixture input</p>
+                        <img src="02source/mix.png" alt="Main Image">
+                        <audio controls>
+                            <source src="02source/mix.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 3.16m</p>
+                        <img src="02source\spk1_3.16.png" alt="Main Image">
+                        <audio controls>
+                            <source src="02source\spk1_3.16.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 3.77m</p>
+                        <img src="02source\spk2_3.77.png" alt="Main Image">
+                        <audio controls>
+                            <source src="02source\spk2_3.77.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="grid">
+                        <div class="card" id="audio1">
+                            <p>Query distance 0m</p>
+                            <img src="02source/[0.].png" alt="Spectrum 1">
+                            <audio controls>
+                                <source src="02source/[0.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio2">
+                            <p>Query distance 0.625m</p>
+                            <img src="02source/[0.625].png" alt="Spectrum 2">
+                            <audio controls>
+                                <source src="02source/[0.625].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio3">
+                            <p>Query distance 1.25m</p>
+                            <img src="02source/[1.25].png" alt="Spectrum 3">
+                            <audio controls>
+                                <source src="02source/[1.25].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio4">
+                            <p>Query distance 1.875m</p>
+                            <img src="02source/[1.875].png" alt="Spectrum 4">
+                            <audio controls>
+                                <source src="02source/[1.875].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio5">
+                            <p>Query distance 2.5m</p>
+                            <img src="02source/[2.5].png" alt="Spectrum 5">
+                            <audio controls>
+                                <source src="02source/[2.5].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio6">
+                            <p>Query distance 3.125m</p>
+                            <img src="02source/[3.125].png" alt="Spectrum 6">
+                            <audio controls>
+                                <source src="02source/[3.125].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio7">
+                            <p>Query distance 3.75m</p>
+                            <img src="02source/[3.75].png" alt="Spectrum 7">
+                            <audio controls>
+                                <source src="02source/[3.75].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio8">
+                            <p>Query distance 4.375m</p>
+                            <img src="02source/[4.375].png" alt="Spectrum 8">
+                            <audio controls>
+                                <source src="02source/[4.375].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio9">
+                            <p>Query distance 5m</p>
+                            <img src="02source/[5.].png" alt="Spectrum 9">
+                            <audio controls>
+                                <source src="02source/[5.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <h1>D2 Sample 2</h1>
+        <h1>Room size: 7*8*3m, RT60: 0.3s</h1>
+        <h1>Speaker distance: 3.25m, 4.86m</h1>
+        <div class="content">
+            <!-- 第一行 1x2 图片布局 -->
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="02source2\01.png" alt="Image 1">
+                </div>
+                <div class="image-container">
+                    <img src="02source2\02.png" alt="Image 2">
+                </div>
+            </div>
+            <!-- 第二行 分左右布局 -->
+            <div class="row">
+                <div class="left">
+                    <div class="card">
+                        <p>Mixture input</p>
+                        <img src="02source2/mix.png" alt="Main Image">
+                        <audio controls>
+                            <source src="02source2/mix.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 3.25m</p>
+                        <img src="02source2\spk1_3.25.png" alt="Main Image">
+                        <audio controls>
+                            <source src="02source2\spk1_3.25.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 4.86m</p>
+                        <img src="02source2\spk2_4.86.png" alt="Main Image">
+                        <audio controls>
+                            <source src="02source2\spk2_4.86.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="grid">
+                        <div class="card" id="audio1">
+                            <p>Query distance 0m</p>
+                            <img src="02source2/[0.].png" alt="Spectrum 1">
+                            <audio controls>
+                                <source src="02source2/[0.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio2">
+                            <p>Query distance 0.625m</p>
+                            <img src="02source2/[0.625].png" alt="Spectrum 2">
+                            <audio controls>
+                                <source src="02source2/[0.625].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio3">
+                            <p>Query distance 1.25m</p>
+                            <img src="02source2/[1.25].png" alt="Spectrum 3">
+                            <audio controls>
+                                <source src="02source2/[1.25].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio4">
+                            <p>Query distance 1.875m</p>
+                            <img src="02source2/[1.875].png" alt="Spectrum 4">
+                            <audio controls>
+                                <source src="02source2/[1.875].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio5">
+                            <p>Query distance 2.5m</p>
+                            <img src="02source2/[2.5].png" alt="Spectrum 5">
+                            <audio controls>
+                                <source src="02source2/[2.5].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio6">
+                            <p>Query distance 3.125m</p>
+                            <img src="02source2/[3.125].png" alt="Spectrum 6">
+                            <audio controls>
+                                <source src="02source2/[3.125].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio7">
+                            <p>Query distance 3.75m</p>
+                            <img src="02source2/[3.75].png" alt="Spectrum 7">
+                            <audio controls>
+                                <source src="02source2/[3.75].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio8">
+                            <p>Query distance 4.375m</p>
+                            <img src="02source2/[4.375].png" alt="Spectrum 8">
+                            <audio controls>
+                                <source src="02source2/[4.375].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio9">
+                            <p>Query distance 5m</p>
+                            <img src="02source2/[5.].png" alt="Spectrum 9">
+                            <audio controls>
+                                <source src="02source2/[5.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-above"></div>
+
+        <h1 id="D3">D3: Random rooms & random mics</h1>
+        <h1>D3 Sample 1</h1>
+        <h1>Room size: 6.447*9.141*2.543m, RT60: 0.408s, mic position: 4.466*4.663*1.2m</h1>
+        <h1>Speaker distance: 0.76m, 2.23m</h1>
+
+        <div class="content">
+            <!-- 第一行 1x2 图片布局 -->
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="03\01.png" alt="Image 1">
+                </div>
+                <div class="image-container">
+                    <img src="03\02.png" alt="Image 2">
+                </div>
+            </div>
+            <!-- 第二行 分左右布局 -->
+            <div class="row">
+                <div class="left">
+                    <div class="card">
+                        <p>Mixture input</p>
+                        <img src="03/mix.png" alt="Main Image">
+                        <audio controls>
+                            <source src="03/mix.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 0.76m</p>
+                        <img src="03\spk1_0.76.png" alt="Main Image">
+                        <audio controls>
+                            <source src="03\spk1_0.76.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 2.23m</p>
+                        <img src="03\spk2_2.23.png" alt="Main Image">
+                        <audio controls>
+                            <source src="03\spk2_2.23.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="grid">
+                        <div class="card" id="audio1">
+                            <p>Query distance 0m</p>
+                            <img src="03/[0.].png" alt="Spectrum 1">
+                            <audio controls>
+                                <source src="03/[0.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio2">
+                            <p>Query distance 0.625m</p>
+                            <img src="03/[0.625].png" alt="Spectrum 2">
+                            <audio controls>
+                                <source src="03/[0.625].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio3">
+                            <p>Query distance 1.25m</p>
+                            <img src="03/[1.25].png" alt="Spectrum 3">
+                            <audio controls>
+                                <source src="03/[1.25].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio4">
+                            <p>Query distance 1.875m</p>
+                            <img src="03/[1.875].png" alt="Spectrum 4">
+                            <audio controls>
+                                <source src="03/[1.875].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio5">
+                            <p>Query distance 2.5m</p>
+                            <img src="03/[2.5].png" alt="Spectrum 5">
+                            <audio controls>
+                                <source src="03/[2.5].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio6">
+                            <p>Query distance 3.125m</p>
+                            <img src="03/[3.125].png" alt="Spectrum 6">
+                            <audio controls>
+                                <source src="03/[3.125].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio7">
+                            <p>Query distance 3.75m</p>
+                            <img src="03/[3.75].png" alt="Spectrum 7">
+                            <audio controls>
+                                <source src="03/[3.75].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio8">
+                            <p>Query distance 4.375m</p>
+                            <img src="03/[4.375].png" alt="Spectrum 8">
+                            <audio controls>
+                                <source src="03/[4.375].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio9">
+                            <p>Query distance 5m</p>
+                            <img src="03/[5.].png" alt="Spectrum 9">
+                            <audio controls>
+                                <source src="03/[5.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1>D3 Sample 2</h1>
+        <h1>Room size: 7.094*5.166*2.991m, RT60: 0.495s, mic position: 3.626*2.014*1.2m</h1>
+        <h1>Speaker distance: 3.08m, 4.01m</h1>
+
+        <div class="content">
+            <!-- 第一行 1x2 图片布局 -->
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="032\01.png" alt="Image 1">
+                </div>
+                <div class="image-container">
+                    <img src="032\02.png" alt="Image 2">
+                </div>
+            </div>
+            <!-- 第二行 分左右布局 -->
+            <div class="row">
+                <div class="left">
+                    <div class="card">
+                        <p>Mixture input</p>
+                        <img src="032/mix.png" alt="Main Image">
+                        <audio controls>
+                            <source src="032/mix.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 3.08m</p>
+                        <img src="032\spk1_3.08.png" alt="Main Image">
+                        <audio controls>
+                            <source src="032\spk1_3.08.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 4.01m</p>
+                        <img src="032\spk2_4.01.png" alt="Main Image">
+                        <audio controls>
+                            <source src="032\spk2_4.01.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="grid">
+                        <div class="card" id="audio1">
+                            <p>Query distance 0m</p>
+                            <img src="032/[0.].png" alt="Spectrum 1">
+                            <audio controls>
+                                <source src="032/[0.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio2">
+                            <p>Query distance 0.625m</p>
+                            <img src="032/[0.625].png" alt="Spectrum 2">
+                            <audio controls>
+                                <source src="032/[0.625].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio3">
+                            <p>Query distance 1.25m</p>
+                            <img src="032/[1.25].png" alt="Spectrum 3">
+                            <audio controls>
+                                <source src="032/[1.25].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio4">
+                            <p>Query distance 1.875m</p>
+                            <img src="032/[1.875].png" alt="Spectrum 4">
+                            <audio controls>
+                                <source src="032/[1.875].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio5">
+                            <p>Query distance 2.5m</p>
+                            <img src="032/[2.5].png" alt="Spectrum 5">
+                            <audio controls>
+                                <source src="032/[2.5].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio6">
+                            <p>Query distance 3.125m</p>
+                            <img src="032/[3.125].png" alt="Spectrum 6">
+                            <audio controls>
+                                <source src="032/[3.125].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio7">
+                            <p>Query distance 3.75m</p>
+                            <img src="032/[3.75].png" alt="Spectrum 7">
+                            <audio controls>
+                                <source src="032/[3.75].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio8">
+                            <p>Query distance 4.375m</p>
+                            <img src="032/[4.375].png" alt="Spectrum 8">
+                            <audio controls>
+                                <source src="032/[4.375].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio9">
+                            <p>Query distance 5m</p>
+                            <img src="032/[5.].png" alt="Spectrum 9">
+                            <audio controls>
+                                <source src="032/[5.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="line-above"> </div>
+
+        <h1 id="D4">D4: Random rooms & random mics</h1>
+        <h1>D4 Sample 1</h1>
+        <h1>Room size: 10.776*6.94*2.598m (room Q301), RT60: 1.56s, mic position: 1.45*3.66*1.29m</h1>
+        <h1>Speaker distance: 5.41m, 7.85m</h1>
+
+        <div class="content">
+            <!-- 第一行 1x2 图片布局 -->
+            <div class="image-grid">
+                <div class="image-container">
+                    <img src="04\01.png" alt="Image 1">
+                </div>
+                <div class="image-container">
+                    <img src="04\02.png" alt="Image 2">
+                </div>
+            </div>
+            <!-- 第二行 分左右布局 -->
+            <div class="row">
+                <div class="left">
+                    <div class="card">
+                        <p>Mixture input</p>
+                        <img src="04/mix.png" alt="Main Image">
+                        <audio controls>
+                            <source src="04/mix.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 5.41m</p>
+                        <img src="04\spk1_5.409999847412109.png" alt="Main Image">
+                        <audio controls>
+                            <source src="04\spk1_5.409999847412109.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="card">
+                        <p>Clean speech at 7.85m</p>
+                        <img src="04\spk2_7.849999904632568.png" alt="Main Image">
+                        <audio controls>
+                            <source src="04\spk2_7.849999904632568.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="grid">
+                        <div class="card" id="audio1">
+                            <p>Query distance 0m</p>
+                            <img src="04/[0.].png" alt="Spectrum 1">
+                            <audio controls>
+                                <source src="04/[0.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio2">
+                            <p>Query distance 1.25m</p>
+                            <img src="04/[1.25].png" alt="Spectrum 2">
+                            <audio controls>
+                                <source src="04/[1.25].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio3">
+                            <p>Query distance 2.5m</p>
+                            <img src="04/[2.5].png" alt="Spectrum 3">
+                            <audio controls>
+                                <source src="04/[2.5].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio4">
+                            <p>Query distance 3.75m</p>
+                            <img src="04/[3.75].png" alt="Spectrum 4">
+                            <audio controls>
+                                <source src="04/[3.75].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio5">
+                            <p>Query distance 5.41m</p>
+                            <img src="04/[5.41].png" alt="Spectrum 5">
+                            <audio controls>
+                                <source src="04/[5.41].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio6">
+                            <p>Query distance 6.25m</p>
+                            <img src="04/[6.25].png" alt="Spectrum 6">
+                            <audio controls>
+                                <source src="04/[6.25].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio7">
+                            <p>Query distance 7.5m</p>
+                            <img src="04/[7.5].png" alt="Spectrum 7">
+                            <audio controls>
+                                <source src="04/[7.5].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio8">
+                            <p>Query distance 8.75m</p>
+                            <img src="04/[8.75].png" alt="Spectrum 8">
+                            <audio controls>
+                                <source src="04/[8.75].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="card" id="audio9">
+                            <p>Query distance 10.0m</p>
+                            <img src="04/[10.].png" alt="Spectrum 9">
+                            <audio controls>
+                                <source src="04/[10.].wav" type="audio/wav">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="line-above"> </div>
 
     <script src="script.js"></script>
 </body>
